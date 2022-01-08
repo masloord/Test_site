@@ -1,0 +1,20 @@
+export const CardRevealList=[
+    {
+        path:'assets/image/Raffle_Reveal_Page/mintable-silver-card-nft.png',
+        draggable:true,
+        id:1,
+        count:5
+    },
+    {
+        path:'assets/image/Raffle_Reveal_Page/mintable-gold-card-nft.png',
+        draggable:true,
+        id:2,
+        count:10
+    },
+    {
+        path:'assets/image/Raffle_Reveal_Page/mintable-diamond-card-nft.png',
+        draggable:true,
+        id:3,
+        count:0
+    },
+]

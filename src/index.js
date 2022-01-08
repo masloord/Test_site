@@ -1,12 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './containers/App';
 import reportWebVitals from './reportWebVitals';
-
+import {BrowserRouter as Router} from "react-router-dom";
+import {DndProvider} from "react-dnd";
+import {ThemeProvider} from "@emotion/react";
+import {createTheme, CssBaseline} from "@mui/material";
+import {HTML5Backend} from "react-dnd-html5-backend";
+const theme = createTheme();
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <DndProvider backend={HTML5Backend}>
+          <ThemeProvider theme={theme}>
+              <CssBaseline />
+              <main>
+                  <Router>
+                      <App />
+                  </Router>
+              </main>
+          </ThemeProvider>
+      </DndProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
